@@ -44,7 +44,7 @@ function isSignUpFormComplete(name, email, password) {
 function createAccount(name, email, password) {
     let users = loadUsers();
     users.push({ name: name, email: email, password: password, phone: "", address: "" });
-    // BUG: changes are not persisted.
+    saveUsers(users);
 }
 
 
@@ -72,7 +72,7 @@ function removeFromCart(productId) {
             newCart.push(cart[i]);
         }
     }
-    saveCart(cart); // BUG: original cart saved
+    saveCart(newCart);
 }
 
 
@@ -87,5 +87,5 @@ function saveAccount(email, name, phone, address) {
             users[i].address = address;
         }
     }
-    // BUG: changes are not persisted.
+    saveUsers(users);
 }
