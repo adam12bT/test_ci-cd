@@ -34,7 +34,7 @@ function findAccount(email, password) {
 // ----- Sign up -----
 // Returns true if every field of the sign up form is filled in.
 function isSignUpFormComplete(name, email, password) {
-    if (name == "" || email == "") {
+    if (name == "" || email == "" || password == "") {
         return false;
     }
     return true;
