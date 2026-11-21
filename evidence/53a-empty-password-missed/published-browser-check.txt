@@ -1,0 +1,6 @@
+Published site incorrectly accepts empty password: true
+Empty-password account can sign in: true
+BROWSER_CHECK_PASSED 53a-empty-password-missed
+
+nov. 22, 2026 12:00:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 157, returning the closest version; found: 156; Please update to a Selenium version that supports CDP version 157

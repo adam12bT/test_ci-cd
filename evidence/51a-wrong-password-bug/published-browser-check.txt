@@ -1,0 +1,5 @@
+Published site refuses wrong password: true
+BROWSER_CHECK_PASSED 51a-wrong-password-bug
+
+nov. 21, 2026 11:55:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 157, returning the closest version; found: 156; Please update to a Selenium version that supports CDP version 157

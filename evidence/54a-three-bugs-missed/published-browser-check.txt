@@ -1,0 +1,10 @@
+Signup displays success: true
+New account was not persisted: true
+Removed product is still in cart: true
+Save displays success: true
+Name reverts after reopening: true
+Phone reverts after reopening: true
+BROWSER_CHECK_PASSED 54a-three-bugs-missed
+
+nov. 22, 2026 12:03:42 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 157, returning the closest version; found: 156; Please update to a Selenium version that supports CDP version 157

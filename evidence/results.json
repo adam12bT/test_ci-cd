@@ -1,0 +1,230 @@
+[
+  {
+    "experiment": "04a-no-headless",
+    "sha": "3e7d3d9941bef38992af2b6a5f720091a2348bc9",
+    "run_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44958850654",
+    "conclusion": "failure",
+    "expected": "failure",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "failure",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44958850654/job/137012917306"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "skipped",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44958850654/job/137013035652"
+      }
+    ]
+  },
+  {
+    "experiment": "04b-headless-fixed",
+    "sha": "43cd4e3a814457c40f7bf0f019c591a33c0fa9c3",
+    "run_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44958901764",
+    "conclusion": "success",
+    "expected": "success",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "success",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44958901764/job/137013079896"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "success",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44958901764/job/137013217370"
+      }
+    ]
+  },
+  {
+    "experiment": "51a-wrong-password-bug",
+    "sha": "b9fcaf354c7ddcd9ff75b409bfdb1e48ca71379b",
+    "run_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959133087",
+    "conclusion": "failure",
+    "expected": "failure",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "failure",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959133087/job/137013804020"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "skipped",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959133087/job/137013931338"
+      }
+    ]
+  },
+  {
+    "experiment": "51b-password-fixed",
+    "sha": "ace88b6a368643ada775b1a388a3d9fb0fe503dd",
+    "run_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959217598",
+    "conclusion": "success",
+    "expected": "success",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "success",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959217598/job/137014064159"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "success",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959217598/job/137014224586"
+      }
+    ]
+  },
+  {
+    "experiment": "52a-title-bug",
+    "sha": "28d115b29fc187383329136637e6aaa0eb60ad79",
+    "run_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959323736",
+    "conclusion": "failure",
+    "expected": "failure",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "failure",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959323736/job/137014405860"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "skipped",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959323736/job/137014617875"
+      }
+    ]
+  },
+  {
+    "experiment": "52b-title-fixed",
+    "sha": "84dc171e3ad2df2f0008cc991a4b4fcde3dc11bd",
+    "run_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959421114",
+    "conclusion": "success",
+    "expected": "success",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "success",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959421114/job/137014717952"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "success",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959421114/job/137014821083"
+      }
+    ]
+  },
+  {
+    "experiment": "53a-empty-password-missed",
+    "sha": "2625d28459260ba565c4e9f5a8943f6d9c7b5c58",
+    "run_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959497672",
+    "conclusion": "success",
+    "expected": "success",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "success",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959497672/job/137014961849"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "success",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959497672/job/137015076188"
+      }
+    ]
+  },
+  {
+    "experiment": "53b-empty-password-detected",
+    "sha": "9677436f4bd202d39221e6da85d5a1c81ea29eda",
+    "run_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959595631",
+    "conclusion": "failure",
+    "expected": "failure",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "failure",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959595631/job/137015258320"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "skipped",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959595631/job/137015460079"
+      }
+    ]
+  },
+  {
+    "experiment": "53c-empty-password-fixed",
+    "sha": "a401777556cf9c158b698f2d7744b5b03e4c9bf4",
+    "run_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959691050",
+    "conclusion": "success",
+    "expected": "success",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "success",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959691050/job/137015536648"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "success",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959691050/job/137015709215"
+      }
+    ]
+  },
+  {
+    "experiment": "54a-three-bugs-missed",
+    "sha": "8a1ce13b1d221bc47a553d0cba394acca7b2c1b7",
+    "run_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959791762",
+    "conclusion": "success",
+    "expected": "success",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "success",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959791762/job/137015850909"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "success",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959791762/job/137016033125"
+      }
+    ]
+  },
+  {
+    "experiment": "54b-three-bugs-detected",
+    "sha": "5abdc1c05f173a5ae941c4e3219b31eac319dde4",
+    "run_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959914248",
+    "conclusion": "failure",
+    "expected": "failure",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "failure",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959914248/job/137016222452"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "skipped",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959914248/job/137016357902"
+      }
+    ]
+  },
+  {
+    "experiment": "54c-three-bugs-fixed",
+    "sha": "2da0fba72441d84efebac052f543a5da4cd11b19",
+    "run_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959982421",
+    "conclusion": "success",
+    "expected": "success",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "success",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959982421/job/137016435296"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "success",
+        "html_url": "https://github.com/adam12bT/test_ci-cd/actions/runs/44959982421/job/137016576440"
+      }
+    ]
+  }
+]

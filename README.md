@@ -1,34 +1,37 @@
-# TestMart - Lab 5 Part 2 (GitHub adaptation)
+# TestMart - Lab 5 Part 2 (completed GitHub adaptation)
 
-The original lab uses GitLab. This version uses GitHub Actions for CI and GitHub Pages for deployment. Confirm that your instructor accepts this platform substitution.
+CS 428 Software Quality & Testing. GitHub username: **adam12bT**.
 
-## Run on GitHub
+- [Completed report (PDF)](Lab5-Part2-Completed-Report.pdf)
+- [Report text](LAB_REPORT.txt)
+- [Printable HTML report](LAB_REPORT.html)
+- [Actual experiment results](evidence/results.json)
+- [Live TestMart](https://adam12bt.github.io/test_ci-cd/)
+- [Actions workflows](https://github.com/adam12bT/test_ci-cd/actions)
 
-1. Put the contents of this folder at the root of your GitHub repository, including `.github`.
-2. In Settings > Pages, select **GitHub Actions** as the source.
-3. Push to the default branch. Open Actions > Test and deploy TestMart.
-4. The `test` job compiles Java and runs seven JUnit/Selenium tests. `deploy` runs only after successful tests on the default branch. Pull requests run tests only.
-5. The deployment job exposes the published website URL. Download `test-logs` for evidence.
+All twelve experiment runs were executed as separate commits: headless setup,
+login bug/fix, title bug/fix, empty-password bug/missing test/fix, and three
+persistence/removal bugs with weak tests, strengthened tests, and fixes.
+The report includes commit links, workflow results, the actual failing test
+names, runner logs, and independent Selenium checks of the published site.
 
-The supplied `.gitlab-ci.yml` is retained as original lab material; GitHub uses `.github/workflows/test-and-deploy.yml`.
+The final implementation is restored. Seven JUnit tests verify title, valid and
+invalid login, persisted signup, refusal of an empty password, actual cart
+removal, and persisted account edits. Headless Chrome runs on GitHub's runner.
 
-## Final changes
+## CI/CD
 
-- Headless Chrome options required by the lab; safe teardown if browser creation fails.
-- Added `TestingSignUpEmptyPassword`.
-- Sign-up success now verifies login using the newly created account.
-- Cart test now verifies absence after removal and reopening the cart.
-- Account test reopens the account page and verifies both saved name and phone.
-- The original correct `shop.js` and home-page title are preserved in this final version.
+`.github/workflows/test-and-deploy.yml` runs tests on pushes and pull requests.
+Deployment depends on passing tests and only runs on the default branch.
+GitHub Pages is enabled with GitHub Actions as its publishing source.
+The starter `.gitlab-ci.yml` is retained for reference; GitHub does not run it.
 
-The unused search/product helper exercises in the starter are from Part 1; the Part 2 PDF does not request them.
+The original lab requests GitLab. This repository uses GitHub at the student's
+request; instructor acceptance of that substitution has not been verified.
+Unused search/product helper exercises in the starter belong to Part 1 and
+are outside the supplied Part 2 lab requirements.
 
-## Experiment evidence
+Published browser checks use the standalone `evidence/PublishedSiteProbe.java`
+against the live HTTPS site and disposable browser-local test data.
 
-See `LAB_REPORT.txt` for answers and the exact mutations to demonstrate. Run each experiment as a separate commit, wait for its workflow, and save its URL before fixing it. Do not present the expected outcomes as observed results.
-
-## Local verification status
-
-Java 17 and Chrome are installed locally. The local network could not reach github.com to download Selenium, so the Java/Selenium suite has not yet run. The workflow installs Java 21 and downloads the dependencies on GitHub. A successful Actions run is still required.
-
-GitHub Pages workflow reference: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+GitHub workflow reference: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages

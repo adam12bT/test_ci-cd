@@ -1,0 +1,275 @@
+﻿2026-11-21T23:04:51.3917463Z Current runner version: '2.338.2'
+2026-11-21T23:04:51.3942217Z ##[group]Runner Image Provisioner
+2026-11-21T23:04:51.3943607Z Hosted Compute Agent
+2026-11-21T23:04:51.3944279Z Version: 20261111.635
+2026-11-21T23:04:51.3944948Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-21T23:04:51.3945764Z Build Date: 2026-11-11T01:49:01Z
+2026-11-21T23:04:51.3946477Z Worker ID: {c2d1d2fe-2851-4cd5-8a99-7fc5fabdd2aa}
+2026-11-21T23:04:51.3947236Z Region: eastus
+2026-11-21T23:04:51.3947826Z Cloud: Azure
+2026-11-21T23:04:51.3948363Z ##[endgroup]
+2026-11-21T23:04:51.3949926Z ##[group]Operating System
+2026-11-21T23:04:51.3950608Z Ubuntu
+2026-11-21T23:04:51.3951168Z 26.04.1
+2026-11-21T23:04:51.3951731Z LTS
+2026-11-21T23:04:51.3952247Z ##[endgroup]
+2026-11-21T23:04:51.3953251Z ##[group]Runner Image
+2026-11-21T23:04:51.3953889Z Image: ubuntu-26.04
+2026-11-21T23:04:51.3954482Z Version: 20261116.202.1
+2026-11-21T23:04:51.3955801Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.202/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-21T23:04:51.3957806Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.202
+2026-11-21T23:04:51.3958802Z ##[endgroup]
+2026-11-21T23:04:51.3960046Z ##[group]GITHUB_TOKEN Permissions
+2026-11-21T23:04:51.3962151Z Contents: read
+2026-11-21T23:04:51.3963160Z Metadata: read
+2026-11-21T23:04:51.3963774Z ##[endgroup]
+2026-11-21T23:04:51.3965940Z Secret source: Actions
+2026-11-21T23:04:51.3966939Z Cache mode: write
+2026-11-21T23:04:51.3967924Z Prepare workflow directory
+2026-11-21T23:04:51.4301702Z Prepare all required actions
+2026-11-21T23:04:51.4349014Z Getting action download info
+2026-11-21T23:04:51.6281066Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-21T23:04:51.7266063Z Download action repository 'actions/setup-java@v6' (SHA:d1374f8ac74474200d16ef8ecee22c7ae7a51880)
+2026-11-21T23:04:51.9659021Z Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-11-21T23:04:52.1358273Z Complete job name: test
+2026-11-21T23:04:52.2334958Z ##[group]Run actions/checkout@v7
+2026-11-21T23:04:52.2335864Z with:
+2026-11-21T23:04:52.2336316Z   repository: adam12bT/test_ci-cd
+2026-11-21T23:04:52.2340205Z   token: ***
+2026-11-21T23:04:52.2340646Z   ssh-strict: true
+2026-11-21T23:04:52.2341081Z   ssh-user: git
+2026-11-21T23:04:52.2341523Z   persist-credentials: true
+2026-11-21T23:04:52.2342001Z   clean: true
+2026-11-21T23:04:52.2342604Z   sparse-checkout-cone-mode: true
+2026-11-21T23:04:52.2343139Z   fetch-depth: 1
+2026-11-21T23:04:52.2343564Z   fetch-tags: false
+2026-11-21T23:04:52.2344005Z   show-progress: true
+2026-11-21T23:04:52.2344450Z   lfs: false
+2026-11-21T23:04:52.2344857Z   submodules: false
+2026-11-21T23:04:52.2345298Z   set-safe-directory: true
+2026-11-21T23:04:52.2345801Z   allow-unsafe-pr-checkout: false
+2026-11-21T23:04:52.2346571Z ##[endgroup]
+2026-11-21T23:04:52.5490526Z Syncing repository: adam12bT/test_ci-cd
+2026-11-21T23:04:52.5493425Z ##[group]Getting Git version info
+2026-11-21T23:04:52.5494505Z Working directory is '/home/runner/work/test_ci-cd/test_ci-cd'
+2026-11-21T23:04:52.5495621Z [command]/usr/bin/git version
+2026-11-21T23:04:52.5516933Z git version 2.56.1
+2026-11-21T23:04:52.5538827Z ##[endgroup]
+2026-11-21T23:04:52.5548975Z Temporarily overriding HOME='/home/runner/work/_temp/14c8bc7b-eb8d-4ae4-bd3b-102b7a5f4f35' before making global git config changes
+2026-11-21T23:04:52.5551438Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-21T23:04:52.5554377Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/test_ci-cd/test_ci-cd
+2026-11-21T23:04:52.5628955Z Deleting the contents of '/home/runner/work/test_ci-cd/test_ci-cd'
+2026-11-21T23:04:52.5633528Z ##[group]Determining repository object format
+2026-11-21T23:04:52.5635237Z ##[endgroup]
+2026-11-21T23:04:52.5636608Z ##[group]Initializing the repository
+2026-11-21T23:04:52.5640233Z [command]/usr/bin/git init /home/runner/work/test_ci-cd/test_ci-cd
+2026-11-21T23:04:52.5754890Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-21T23:04:52.5756773Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-21T23:04:52.5758548Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-21T23:04:52.5760081Z hint: call:
+2026-11-21T23:04:52.5761145Z hint:
+2026-11-21T23:04:52.5762344Z hint: 	git config --global init.defaultBranch <name>
+2026-11-21T23:04:52.5763810Z hint:
+2026-11-21T23:04:52.5765029Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-21T23:04:52.5766856Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-21T23:04:52.5768398Z hint:
+2026-11-21T23:04:52.5769322Z hint: 	git branch -m <name>
+2026-11-21T23:04:52.5770282Z hint:
+2026-11-21T23:04:52.5771691Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-21T23:04:52.5773926Z Initialized empty Git repository in /home/runner/work/test_ci-cd/test_ci-cd/.git/
+2026-11-21T23:04:52.5779379Z [command]/usr/bin/git remote add origin https://github.com/adam12bT/test_ci-cd
+2026-11-21T23:04:52.5835869Z ##[endgroup]
+2026-11-21T23:04:52.5837212Z ##[group]Disabling automatic garbage collection
+2026-11-21T23:04:52.5840435Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-21T23:04:52.5875816Z ##[endgroup]
+2026-11-21T23:04:52.5877574Z ##[group]Setting up auth
+2026-11-21T23:04:52.5878696Z Removing SSH command configuration
+2026-11-21T23:04:52.5880264Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-21T23:04:52.5915755Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-21T23:04:52.6414974Z Removing HTTP extra header
+2026-11-21T23:04:52.6420717Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-21T23:04:52.6453242Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-21T23:04:52.6714709Z Removing includeIf entries pointing to credentials config files
+2026-11-21T23:04:52.6720213Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-21T23:04:52.6759233Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-21T23:04:52.7026528Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-911acc10-8f6d-4252-a1ea-082e6e710a17.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-21T23:04:52.7063387Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/test_ci-cd/test_ci-cd/.git.path /home/runner/work/_temp/git-credentials-911acc10-8f6d-4252-a1ea-082e6e710a17.config
+2026-11-21T23:04:52.7094821Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/test_ci-cd/test_ci-cd/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-911acc10-8f6d-4252-a1ea-082e6e710a17.config
+2026-11-21T23:04:52.7129766Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-911acc10-8f6d-4252-a1ea-082e6e710a17.config
+2026-11-21T23:04:52.7161282Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-911acc10-8f6d-4252-a1ea-082e6e710a17.config
+2026-11-21T23:04:52.7190053Z ##[endgroup]
+2026-11-21T23:04:52.7190816Z ##[group]Fetching the repository
+2026-11-21T23:04:52.7196628Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2da0fba72441d84efebac052f543a5da4cd11b19:refs/remotes/origin/main
+2026-11-21T23:04:52.9285058Z From https://github.com/adam12bT/test_ci-cd
+2026-11-21T23:04:52.9286520Z  * [new ref]         2da0fba72441d84efebac052f543a5da4cd11b19 -> origin/main
+2026-11-21T23:04:52.9314905Z [command]/usr/bin/git branch --list --remote origin/main
+2026-11-21T23:04:52.9328720Z   origin/main
+2026-11-21T23:04:52.9364573Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-11-21T23:04:52.9365664Z 2da0fba72441d84efebac052f543a5da4cd11b19
+2026-11-21T23:04:52.9367969Z ##[endgroup]
+2026-11-21T23:04:52.9368986Z ##[group]Determining the checkout info
+2026-11-21T23:04:52.9370135Z ##[endgroup]
+2026-11-21T23:04:52.9374538Z [command]/usr/bin/git sparse-checkout disable
+2026-11-21T23:04:52.9428655Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-21T23:04:52.9463944Z ##[group]Checking out the ref
+2026-11-21T23:04:52.9468585Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-21T23:04:52.9551315Z Switched to a new branch 'main'
+2026-11-21T23:04:52.9557590Z branch 'main' set up to track 'origin/main'.
+2026-11-21T23:04:52.9561922Z ##[endgroup]
+2026-11-21T23:04:52.9611250Z [command]/usr/bin/git log -1 --format=%H
+2026-11-21T23:04:52.9637594Z 2da0fba72441d84efebac052f543a5da4cd11b19
+2026-11-21T23:04:53.0242259Z ##[group]Run actions/setup-java@v6
+2026-11-21T23:04:53.0243496Z with:
+2026-11-21T23:04:53.0244267Z   distribution: temurin
+2026-11-21T23:04:53.0245169Z   java-version: 21
+2026-11-21T23:04:53.0246011Z   java-package: jdk
+2026-11-21T23:04:53.0246867Z   check-latest: false
+2026-11-21T23:04:53.0247754Z   force-download: false
+2026-11-21T23:04:53.0248659Z   set-default: true
+2026-11-21T23:04:53.0249506Z   server-id: github
+2026-11-21T23:04:53.0250454Z   mvn-repositories-include-central: true
+2026-11-21T23:04:53.0251737Z   mvn-repositories-prioritize-central: true
+2026-11-21T23:04:53.0253079Z   overwrite-settings: true
+2026-11-21T23:04:53.0254082Z   cache-read-only: false
+2026-11-21T23:04:53.0255007Z   job-status: success
+2026-11-21T23:04:53.0264625Z   token: ***
+2026-11-21T23:04:53.0265502Z   show-download-progress: false
+2026-11-21T23:04:53.0266550Z   problem-matcher: false
+2026-11-21T23:04:53.0267477Z ##[endgroup]
+2026-11-21T23:04:53.1016856Z ##[group]Installed distributions
+2026-11-21T23:04:53.1100727Z Resolved Java 21.0.13+9 from tool-cache
+2026-11-21T23:04:53.1102757Z Setting Java 21.0.13+9 as the default
+2026-11-21T23:04:53.1109136Z 
+2026-11-21T23:04:53.1110119Z Java configuration:
+2026-11-21T23:04:53.1111431Z   Distribution: temurin
+2026-11-21T23:04:53.1112939Z   Version: 21.0.13+9
+2026-11-21T23:04:53.1114593Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-21T23:04:53.1115703Z 
+2026-11-21T23:04:53.1116674Z ##[endgroup]
+2026-11-21T23:04:53.1135337Z Creating settings.xml with server-id: github
+2026-11-21T23:04:53.1141383Z Creating toolchains.xml for JDK version 21 from temurin
+2026-11-21T23:04:53.1144742Z Writing to /home/runner/.m2/settings.xml
+2026-11-21T23:04:53.1157026Z Writing to /home/runner/.m2/toolchains.xml
+2026-11-21T23:04:53.1167539Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+2026-11-21T23:04:53.1305319Z ##[group]Run curl -fLsS --retry 3 -o selenium.zip https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.52.0/selenium-java-4.52.0.zip
+2026-11-21T23:04:53.1309269Z [36;1mcurl -fLsS --retry 3 -o selenium.zip https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.52.0/selenium-java-4.52.0.zip[0m
+2026-11-21T23:04:53.1311695Z [36;1mmkdir -p selenium[0m
+2026-11-21T23:04:53.1313002Z [36;1m(cd selenium && jar xf ../selenium.zip)[0m
+2026-11-21T23:04:53.1315179Z [36;1mcurl -fLsS --retry 3 -o selenium/junit.jar https://repo.maven.apache.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar[0m
+2026-11-21T23:04:53.1318575Z [36;1mcurl -fLsS --retry 3 -o selenium/hamcrest.jar https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar[0m
+2026-11-21T23:04:53.1360580Z shell: /usr/bin/bash -e {0}
+2026-11-21T23:04:53.1361757Z env:
+2026-11-21T23:04:53.1363226Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-21T23:04:53.1365182Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-21T23:04:53.1366693Z   MAVEN_ARGS: -ntp
+2026-11-21T23:04:53.1367477Z ##[endgroup]
+2026-11-21T23:04:55.0041171Z ##[group]Run python3 -m http.server 5500 --bind 127.0.0.1 --directory website > server.log 2>&1 &
+2026-11-21T23:04:55.0041927Z [36;1mpython3 -m http.server 5500 --bind 127.0.0.1 --directory website > server.log 2>&1 &[0m
+2026-11-21T23:04:55.0042610Z [36;1mfor attempt in {1..30}; do[0m
+2026-11-21T23:04:55.0043081Z [36;1m  if curl -fsS http://127.0.0.1:5500/index.html > /dev/null; then exit 0; fi[0m
+2026-11-21T23:04:55.0043553Z [36;1m  sleep 1[0m
+2026-11-21T23:04:55.0043817Z [36;1mdone[0m
+2026-11-21T23:04:55.0044070Z [36;1mcat server.log[0m
+2026-11-21T23:04:55.0044339Z [36;1mexit 1[0m
+2026-11-21T23:04:55.0077928Z shell: /usr/bin/bash -e {0}
+2026-11-21T23:04:55.0078261Z env:
+2026-11-21T23:04:55.0078633Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-21T23:04:55.0079205Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-21T23:04:55.0079650Z   MAVEN_ARGS: -ntp
+2026-11-21T23:04:55.0079940Z ##[endgroup]
+2026-11-21T23:04:55.0186469Z curl: (7) Failed to connect to 127.0.0.1 port 5500 after 0 ms: Could not connect to server
+2026-11-21T23:04:56.0366179Z ##[group]Run set -o pipefail
+2026-11-21T23:04:56.0366506Z [36;1mset -o pipefail[0m
+2026-11-21T23:04:56.0366880Z [36;1mjavac -cp "selenium/*:selenium/lib/*" -d out src/seleniumScripts/*.java[0m
+2026-11-21T23:04:56.0367599Z [36;1mjava -cp "out:selenium/*:selenium/lib/*" org.junit.runner.JUnitCore seleniumScripts.TestGenerator 2>&1 | tee test-results.log[0m
+2026-11-21T23:04:56.0402144Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-21T23:04:56.0402823Z env:
+2026-11-21T23:04:56.0403152Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-21T23:04:56.0403676Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-21T23:04:56.0404060Z   MAVEN_ARGS: -ntp
+2026-11-21T23:04:56.0404265Z ##[endgroup]
+2026-11-21T23:04:57.6470616Z JUnit version 4.13.2
+2026-11-21T23:05:06.6185580Z .Nov 21, 2026 11:05:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+2026-11-21T23:05:06.6187456Z WARNING: Unable to find an exact match for CDP version 157, returning the closest version; found: 156; Please update to a Selenium version that supports CDP version 157
+2026-11-21T23:05:07.9404034Z .Nov 21, 2026 11:05:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+2026-11-21T23:05:07.9434359Z WARNING: Unable to find an exact match for CDP version 157, returning the closest version; found: 156; Please update to a Selenium version that supports CDP version 157
+2026-11-21T23:05:10.9222343Z .Nov 21, 2026 11:05:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+2026-11-21T23:05:10.9260621Z WARNING: Unable to find an exact match for CDP version 157, returning the closest version; found: 156; Please update to a Selenium version that supports CDP version 157
+2026-11-21T23:05:11.9895052Z .Nov 21, 2026 11:05:11 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+2026-11-21T23:05:11.9923876Z WARNING: Unable to find an exact match for CDP version 157, returning the closest version; found: 156; Please update to a Selenium version that supports CDP version 157
+2026-11-21T23:05:14.7545318Z .Nov 21, 2026 11:05:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+2026-11-21T23:05:14.7575158Z WARNING: Unable to find an exact match for CDP version 157, returning the closest version; found: 156; Please update to a Selenium version that supports CDP version 157
+2026-11-21T23:05:15.2864116Z .Nov 21, 2026 11:05:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+2026-11-21T23:05:15.2934376Z WARNING: Unable to find an exact match for CDP version 157, returning the closest version; found: 156; Please update to a Selenium version that supports CDP version 157
+2026-11-21T23:05:16.3444621Z .Nov 21, 2026 11:05:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+2026-11-21T23:05:16.3447312Z WARNING: Unable to find an exact match for CDP version 157, returning the closest version; found: 156; Please update to a Selenium version that supports CDP version 157
+2026-11-21T23:05:18.7809248Z 
+2026-11-21T23:05:18.7856050Z Time: 20.965
+2026-11-21T23:05:18.7856466Z 
+2026-11-21T23:05:18.7856919Z OK (7 tests)
+2026-11-21T23:05:18.7857120Z 
+2026-11-21T23:05:18.8036298Z ##[group]Run actions/upload-artifact@v7
+2026-11-21T23:05:18.8036596Z with:
+2026-11-21T23:05:18.8036784Z   name: test-logs
+2026-11-21T23:05:18.8037007Z   path: test-results.log
+server.log
+
+2026-11-21T23:05:18.8037273Z   if-no-files-found: warn
+2026-11-21T23:05:18.8037500Z   compression-level: 6
+2026-11-21T23:05:18.8037710Z   overwrite: false
+2026-11-21T23:05:18.8037940Z   include-hidden-files: false
+2026-11-21T23:05:18.8038172Z   archive: true
+2026-11-21T23:05:18.8038357Z env:
+2026-11-21T23:05:18.8038644Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-21T23:05:18.8039142Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-21T23:05:18.8039521Z   MAVEN_ARGS: -ntp
+2026-11-21T23:05:18.8039721Z ##[endgroup]
+2026-11-21T23:05:18.9507443Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-21T23:05:18.9512312Z The least common ancestor is /home/runner/work/test_ci-cd/test_ci-cd. This will be the root directory of the artifact
+2026-11-21T23:05:18.9513648Z With the provided path, there will be 2 files uploaded
+2026-11-21T23:05:18.9514823Z Artifact name is valid!
+2026-11-21T23:05:18.9515443Z Root directory input is valid!
+2026-11-21T23:05:19.1520310Z Uploading artifact: test-logs.zip
+2026-11-21T23:05:19.1560642Z Beginning upload of artifact content to blob storage
+2026-11-21T23:05:19.2412085Z Uploaded bytes 884
+2026-11-21T23:05:19.2567726Z Finished uploading artifact content to blob storage!
+2026-11-21T23:05:19.2568866Z SHA256 digest of uploaded artifact is d062b274917fc5fa7de1e3fd80341b5117444e93920d4dee7d8343bc65c8bb05
+2026-11-21T23:05:19.2569919Z Finalizing artifact upload
+2026-11-21T23:05:19.5923996Z Artifact test-logs successfully finalized. Artifact ID 14729416357
+2026-11-21T23:05:19.5925197Z Artifact test-logs has been successfully uploaded! Final size is 884 bytes. Artifact ID is 14729416357
+2026-11-21T23:05:19.5928611Z Artifact download URL: https://github.com/adam12bT/test_ci-cd/actions/runs/44959982421/artifacts/14729416357
+2026-11-21T23:05:19.6147762Z Post job cleanup.
+2026-11-21T23:05:19.6976200Z Post job cleanup.
+2026-11-21T23:05:19.7894750Z [command]/usr/bin/git version
+2026-11-21T23:05:19.7953370Z git version 2.56.1
+2026-11-21T23:05:19.7992141Z Temporarily overriding HOME='/home/runner/work/_temp/2076b148-e361-4438-ac25-551f5e839ad3' before making global git config changes
+2026-11-21T23:05:19.7993617Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-21T23:05:19.7998649Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/test_ci-cd/test_ci-cd
+2026-11-21T23:05:19.8035404Z Removing SSH command configuration
+2026-11-21T23:05:19.8041594Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-21T23:05:19.8094098Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-21T23:05:19.8506543Z Removing HTTP extra header
+2026-11-21T23:05:19.8515228Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-21T23:05:19.8576363Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-21T23:05:19.8981477Z Removing includeIf entries pointing to credentials config files
+2026-11-21T23:05:19.8983520Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-21T23:05:19.9011693Z includeif.gitdir:/home/runner/work/test_ci-cd/test_ci-cd/.git.path
+2026-11-21T23:05:19.9013093Z includeif.gitdir:/home/runner/work/test_ci-cd/test_ci-cd/.git/worktrees/*.path
+2026-11-21T23:05:19.9013947Z includeif.gitdir:/github/workspace/.git.path
+2026-11-21T23:05:19.9014641Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-21T23:05:19.9022740Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/test_ci-cd/test_ci-cd/.git.path
+2026-11-21T23:05:19.9048107Z /home/runner/work/_temp/git-credentials-911acc10-8f6d-4252-a1ea-082e6e710a17.config
+2026-11-21T23:05:19.9061307Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/test_ci-cd/test_ci-cd/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-911acc10\-8f6d\-4252\-a1ea\-082e6e710a17\.config
+2026-11-21T23:05:19.9106351Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/test_ci-cd/test_ci-cd/.git/worktrees/*.path
+2026-11-21T23:05:19.9138026Z /home/runner/work/_temp/git-credentials-911acc10-8f6d-4252-a1ea-082e6e710a17.config
+2026-11-21T23:05:19.9146044Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/test_ci-cd/test_ci-cd/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-911acc10\-8f6d\-4252\-a1ea\-082e6e710a17\.config
+2026-11-21T23:05:19.9193506Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-21T23:05:19.9219335Z /github/runner_temp/git-credentials-911acc10-8f6d-4252-a1ea-082e6e710a17.config
+2026-11-21T23:05:19.9230257Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-911acc10\-8f6d\-4252\-a1ea\-082e6e710a17\.config
+2026-11-21T23:05:19.9270033Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-21T23:05:19.9296633Z /github/runner_temp/git-credentials-911acc10-8f6d-4252-a1ea-082e6e710a17.config
+2026-11-21T23:05:19.9307732Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-911acc10\-8f6d\-4252\-a1ea\-082e6e710a17\.config
+2026-11-21T23:05:19.9347492Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-21T23:05:19.9638318Z Removing credentials config '/home/runner/work/_temp/git-credentials-911acc10-8f6d-4252-a1ea-082e6e710a17.config'
+2026-11-21T23:05:19.9787043Z Cleaning up orphan processes
+2026-11-21T23:05:20.0105206Z Terminate orphan process: pid (2464) (python3)
