@@ -1,0 +1,100 @@
+CS 428 - Lab 5 Part 2: Test Automation and CI/CD
+Platform adaptation: GitHub Actions and GitHub Pages
+
+STATUS: Prepared answers and final code. Remote runs, commit URLs, screenshots,
+and deployment observations are pending. Outcomes below are predictions based
+on source inspection, not claims of completed experiments.
+
+1. Creating the project
+Use a GitHub repository. Repository URL: pending.
+Enable Settings > Pages > Source: GitHub Actions.
+
+2. Adding the pipeline
+The website/ and src/ directories are copied from the starter ZIP. GitHub reads
+.github/workflows/test-and-deploy.yml instead of .gitlab-ci.yml.
+
+3. Understanding the pipeline
+The test job checks out the repository, installs Java 21, downloads Selenium and
+JUnit, starts an HTTP server on port 5500, compiles the Java classes, and runs
+JUnitCore. A failing test produces a nonzero exit status and fails the job.
+The deploy job has needs: test, so failed tests block publication. It uploads
+website/ and deploys it using the GitHub Pages actions. Only the default branch
+is deployed. The previously published site remains after a failed test job.
+
+4. Running the pipeline
+Original lab demonstration: run the six original tests with new ChromeDriver()
+on a runner without a display. Expected: browser session creation fails; test
+job fails and deployment is skipped. The original teardown can also throw a
+NullPointerException because the driver was never created.
+Fix: import ChromeOptions, add --headless=new, --no-sandbox and
+--disable-dev-shm-usage, then call new ChromeDriver(options).
+Expected after fixing: OK (6 tests) with original tests; successful deployment.
+The completed suite in this folder instead contains seven tests.
+Actual run URL/log and Pages URL: pending.
+
+5.1 Sign-in bug
+Mutation in findAccount(): replace
+  users[i].email == email && users[i].password == password
+with
+  users[i].email == email
+Expected: TestingLoginFalsePassword fails because no error is shown and login
+succeeds. Deployment is skipped. The published site retains the prior working
+password validation, provided a successful deployment already exists.
+Restore the original condition: tests pass and deployment resumes.
+Actual failing/fixed run URLs and published-site check: pending.
+
+5.2 Home-page title bug
+Mutation in website/index.html: change the <title> text to Broken Store.
+Expected: TestingWebsiteTitle fails because it expects TestMart - Online Store.
+Deployment is skipped and the published title stays at the last deployed value.
+Restore the original title: tests pass and deployment resumes.
+Actual failing/fixed run URLs and published-site check: pending.
+
+5.3 Missing-password bug
+Mutation in isSignUpFormComplete(): change
+  name == "" || email == "" || password == ""
+to
+  name == "" || email == ""
+With the original six tests: expected green job and deployment, even though
+an empty password is accepted. None of those tests tries an empty password.
+This demonstrates a missing negative test, not proof that the site is correct.
+
+Add TestingSignUpEmptyPassword without fixing the mutation:
+  connection.signUp("Empty Password", "empty.password@example.com", "");
+  assertTrue(connection.isSignUpErrorDisplayed());
+  assertFalse(connection.isSignUpSuccessful());
+Expected: this new test fails, blocking deployment. Restore the password
+condition: expected OK (7 tests) and successful deployment.
+Actual three run URLs and published-site empty-password check: pending.
+
+5.4 Three persistence/removal bugs
+Introduce all three mutations together:
+  createAccount(): remove its saveUsers(users) call.
+  removeFromCart(): replace saveCart(newCart) with saveCart(cart).
+  saveAccount(): remove its saveUsers(users) call.
+Do not remove saveUsers from any other function.
+
+With the original tests (plus the empty-password test), expected green job:
+the signup test checks only a confirmation message, the cart test has no
+assertion after removal, and the account test reads the values still in the
+edited form. The bugs can therefore deploy.
+Manual checks: signup then try logging in with the new account; remove a cart
+item and reload; save account changes then reopen the account page.
+
+Improve tests while leaving all three bugs present:
+  TestingSignUpSuccess: login with the new email/password after the success
+  message, then assertTrue(connection.isLoggedIn()).
+  TestingAddAndRemoveFromCart: after removal, assertFalse on
+  connection.isProductInCart("Nova Laptop 14"). This helper reopens the cart.
+  TestingEditAccountInformation: check the success message, reopen the account
+  page, then assert the saved name and phone match the edited values.
+Expected: these three tests fail and deployment is skipped. Restore all three
+storage/removal operations: expected OK (7 tests) and successful deployment.
+Actual original/improved/fixed run URLs and manual checks: pending.
+
+Conclusion
+CI can block regressions only when tests exercise the affected behavior and
+assert its real outcome. Success messages alone do not prove persistence.
+Negative input checks, rereading persisted data, and assertions after destructive
+actions strengthen the tests. A passing suite is evidence of tested behavior,
+not evidence that every possible defect is absent.

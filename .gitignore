@@ -1,0 +1,6 @@
+bin/
+out/
+selenium/
+.classpath
+.project
+.settings/
