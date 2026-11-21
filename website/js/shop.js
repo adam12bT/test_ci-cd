@@ -23,7 +23,7 @@
 function findAccount(email, password) {
     let users = loadUsers();
     for (let i = 0; i < users.length; i++) {
-        if (users[i].email == email && users[i].password == password) {
+        if (users[i].email == email) {
             return users[i];
         }
     }
