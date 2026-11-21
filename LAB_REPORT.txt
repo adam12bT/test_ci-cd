@@ -1,5 +1,6 @@
 CS 428 - Software Quality & Testing
 Lab 5 Part 2 - Test Automation and CI/CD
+Prepared by: Adam Bouassida, Skander Bouricha, and Louay Zaidi
 Student GitHub username: adam12bT
 Platform adaptation: GitHub Actions and GitHub Pages
 

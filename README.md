@@ -2,6 +2,8 @@
 
 CS 428 Software Quality & Testing. GitHub username: **adam12bT**.
 
+Prepared by **Adam Bouassida, Skander Bouricha, and Louay Zaidi**.
+
 - [Completed report (PDF)](Lab5-Part2-Completed-Report.pdf)
 - [Report text](LAB_REPORT.txt)
 - [Printable HTML report](LAB_REPORT.html)
