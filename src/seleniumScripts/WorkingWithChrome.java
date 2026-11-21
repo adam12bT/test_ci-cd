@@ -18,7 +18,7 @@ public class WorkingWithChrome {
 	public void invokeBrowser() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless=new", "--no-sandbox", "--disable-dev-shm-usage");
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(options);
 		// When an element is not found right away, keep looking for up to 2 seconds.
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		driver.get(baseUrl + "index.html");
