@@ -51,6 +51,13 @@ public class TestGenerator {
 	}
 
 	@Test
+	public void TestingSignUpEmptyPassword() {
+		connection.signUp("Empty Password", "empty.password@example.com", "");
+		assertTrue(connection.isSignUpErrorDisplayed());
+		assertFalse(connection.isSignUpSuccessful());
+	}
+
+	@Test
 	public void TestingAddAndRemoveFromCart() {
 		connection.addProductToCart("Nova Laptop 14");
 		assertTrue(connection.isProductInCart("Nova Laptop 14"));
