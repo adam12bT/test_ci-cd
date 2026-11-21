@@ -48,6 +48,8 @@ public class TestGenerator {
 		connection.signUp("New Student", "new.student@example.com", "Pass1234");
 
 		assertTrue(connection.isSignUpSuccessful());
+		connection.login("new.student@example.com", "Pass1234");
+		assertTrue(connection.isLoggedIn());
 	}
 
 	@Test
@@ -63,6 +65,7 @@ public class TestGenerator {
 		assertTrue(connection.isProductInCart("Nova Laptop 14"));
 
 		connection.removeProductFromCart("Nova Laptop 14");
+		assertFalse(connection.isProductInCart("Nova Laptop 14"));
 	}
 
 	@Test
@@ -71,6 +74,8 @@ public class TestGenerator {
 		connection.editAccountInformation("Edited Name", "98765432");
 
 		assertTrue(connection.isAccountSaved());
+		connection.openAccountPage();
 		assertEquals("Edited Name", connection.getAccountName());
+		assertEquals("98765432", connection.getAccountPhone());
 	}
 }
